@@ -103,3 +103,110 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.review-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.review-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.review-item p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .book-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .book-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .book-item p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .review-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .review-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .review-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .book-item h3 {
+        font-size: 1rem;
+    }
+
+    .book-item p {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .auth-container a {
+        font-size: 0.9rem;
+    }
+}

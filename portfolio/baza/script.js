@@ -14,7 +14,7 @@ function fetchBooks() {
                     const bookItem = document.createElement('div');
                     bookItem.classList.add('book-item');
 
-                    // HTML do wyświetlania książki
+                   
                     bookItem.innerHTML = `
                         <h3>${book.title}</h3>
                         <p>Autor: ${book.author}</p>
@@ -24,10 +24,10 @@ function fetchBooks() {
                         <p class="average-rating">Średnia ocen użytkowników: ${book.average_rating ? book.average_rating : 'Brak ocen'}</p>
                     `;
 
-                    // Sprawdzamy, czy użytkownik jest zalogowany
-                    const loggedIn = isLoggedIn(); // Ta funkcja sprawdza, czy użytkownik jest zalogowany
+                    
+                    const loggedIn = isLoggedIn(); 
 
-                    // Jeżeli użytkownik jest zalogowany, dodaj formularz do oceny książki
+                    
                     if (loggedIn) {
                         const rateForm = document.createElement('form');
                         rateForm.setAttribute('action', 'rate_book.php');
@@ -69,9 +69,8 @@ function fetchBooks() {
         });
 }
 
-// Funkcja sprawdzająca, czy użytkownik jest zalogowany (przykład z sesji, może wymagać dostosowania)
+
 function isLoggedIn() {
-    // To jest tylko przykładowa implementacja. W rzeczywistości możesz sprawdzać zalogowanie
-    // np. poprzez ciasteczka, sesje lub tokeny w zależności od implementacji.
-    return sessionStorage.getItem('userLoggedIn') === 'true'; // Przykład z sessionStorage
+    
+    return sessionStorage.getItem('userLoggedIn') === 'true'; 
 }

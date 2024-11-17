@@ -68,6 +68,7 @@ $conn->close();
     <h1>Witaj, <?php echo htmlspecialchars($user['username']); ?>!</h1>
     <div class="auth-container">
         <a href="logout.php">Wyloguj się</a> |
+        <a href="reviews.php">Recenzje</a>
     </div>
 </header>
 
