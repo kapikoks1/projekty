@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie - Katalog Książek</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1>Logowanie</h1>
+        <div class="auth-container">
+            <a href="index.html">Powrót do strony głównej</a> | <a href="register.html">Nie masz konta? Zarejestruj się</a>
+        </div>
+    </header>
+
+    <main>
+        <form action="login.php" method="POST" class="login-form">
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Zaloguj się</button>
+        </form>
+    </main>
+</body>
+</html>
