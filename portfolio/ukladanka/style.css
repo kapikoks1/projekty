@@ -1,0 +1,214 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    background-color: #e8f5e9; /* Jasnozielone tło */
+}
+
+#background {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(76, 175, 80, 0.4)); /* Zielony gradient */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#map, #rasterMap {
+    width: 100%;
+    max-width: 600px; /* Ograniczenie szerokości map */
+    height: 300px;
+    border: 2px solid #388e3c; /* Zielona ramka */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: #fff; /* Białe tło map */
+}
+
+#rasterMap {
+    display: none;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 75px;
+    border: 2px solid #388e3c; /* Zielona ramka */
+    border-radius: 5px;
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.05);
+}
+
+#puzzleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #388e3c;
+    background-color: #c8e6c9; /* Zielone tło dla kontenera */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.drop-area {
+    width: 150px;
+    height: 75px;
+    border: 2px dashed #388e3c;
+    border-radius: 5px;
+    margin: 2px;
+    position: relative;
+    background-color: #a5d6a7; /* Jasnozielony kolor tła */
+    transition: background-color 0.3s;
+}
+
+.drop-area.filled {
+    background-color: #81c784; /* Ciemniejszy zielony, gdy pole wypełnione */
+}
+
+#dropAreaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#winScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    visibility: hidden;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+#winScreen h1 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#replayButton {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    color: green;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#replayButton:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #map, #rasterMap {
+        width: 100%;
+        height: 250px;
+    }
+
+    #puzzleContainer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .puzzle-piece {
+        width: 120px;
+        height: 60px;
+    }
+
+    .drop-area {
+        width: 120px;
+        height: 60px;
+    }
+
+    #dropAreaContainer {
+        margin-top: 20px;
+    }
+
+    #message {
+        font-size: 18px;
+    }
+
+    #winScreen h1 {
+        font-size: 2em;
+    }
+
+    #replayButton {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    #map, #rasterMap {
+        width: 100%;
+        height: 200px;
+    }
+
+    .puzzle-piece {
+        width: 100px;
+        height: 50px;
+    }
+
+    .drop-area {
+        width: 100px;
+        height: 50px;
+    }
+
+    #message {
+        font-size: 16px;
+    }
+
+    #winScreen h1 {
+        font-size: 1.5em;
+    }
+
+    #replayButton {
+        font-size: 1.1em;
+    }
+}
